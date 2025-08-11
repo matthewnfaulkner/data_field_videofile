@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
+/** 
  * Class file field for database activity
  *
  * @package    datafield_videofile
@@ -36,6 +36,9 @@ class data_field_videofile extends data_field_file {
         return '.avi, .flv, .f4v, .fmp4, .mov, .mp4, .m4v, .mpeg, .mpe, .mpg, .ogv, .qt, .ts, .webm';
     }
 
+    function file_import_supported() {
+        return true;
+    }
 
     function display_add_field($recordid = 0, $formdata = null) {
         global $CFG, $DB, $OUTPUT, $PAGE;
